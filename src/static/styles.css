@@ -149,6 +149,40 @@ section h3 {
   font-size: 16px;
 }
 
+#auth-forms {
+  display: grid;
+  gap: 20px;
+}
+
+.auth-box {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+#profile-panel {
+  margin-top: 20px;
+}
+
+#logged-in-email {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.field-note {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #4a4a4a;
+}
+
+@media (min-width: 768px) {
+  #auth-forms {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 button {
   background-color: #1a237e;
   color: white;

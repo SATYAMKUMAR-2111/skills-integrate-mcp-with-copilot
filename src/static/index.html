@@ -27,6 +27,7 @@
           <div class="form-group">
             <label for="email">Student Email:</label>
             <input type="email" id="email" required placeholder="your-email@mergington.edu" />
+            <p id="logged-in-email" class="field-note hidden"></p>
           </div>
           <div class="form-group">
             <label for="activity">Select Activity:</label>
@@ -37,7 +38,94 @@
           </div>
           <button type="submit">Sign Up</button>
         </form>
+      </section>
+
+      <section id="auth-container">
+        <h3>Account</h3>
         <div id="message" class="hidden"></div>
+
+        <div id="auth-forms">
+          <div class="auth-box">
+            <h4>Register</h4>
+            <form id="register-form">
+              <div class="form-group">
+                <label for="register-email">Email</label>
+                <input type="email" id="register-email" required placeholder="student@mergington.edu" />
+              </div>
+              <div class="form-group">
+                <label for="register-name">Name</label>
+                <input type="text" id="register-name" placeholder="Full name" />
+              </div>
+              <div class="form-group">
+                <label for="register-password">Password</label>
+                <input type="password" id="register-password" required placeholder="Choose a password" />
+              </div>
+              <div class="form-group">
+                <label for="register-role">Role</label>
+                <select id="register-role">
+                  <option value="student">Student</option>
+                  <option value="teacher">Teacher</option>
+                </select>
+              </div>
+              <button type="submit">Register</button>
+            </form>
+          </div>
+
+          <div class="auth-box">
+            <h4>Login</h4>
+            <form id="login-form">
+              <div class="form-group">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" required placeholder="student@mergington.edu" />
+              </div>
+              <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" required placeholder="Enter password" />
+              </div>
+              <button type="submit">Login</button>
+            </form>
+          </div>
+        </div>
+
+        <div id="profile-panel" class="hidden auth-box">
+          <h4>Your Profile</h4>
+          <p id="profile-info"></p>
+          <button id="logout-button" type="button">Logout</button>
+
+          <h5>Update name</h5>
+          <form id="update-profile-form">
+            <div class="form-group">
+              <label for="update-name">Name</label>
+              <input type="text" id="update-name" placeholder="New name" />
+            </div>
+            <button type="submit">Update Profile</button>
+          </form>
+
+          <h5>Change password</h5>
+          <form id="change-password-form">
+            <div class="form-group">
+              <label for="old-password">Current password</label>
+              <input type="password" id="old-password" required placeholder="Enter current password" />
+            </div>
+            <div class="form-group">
+              <label for="new-password">New password</label>
+              <input type="password" id="new-password" required placeholder="Enter new password" />
+            </div>
+            <button type="submit">Change Password</button>
+          </form>
+
+          <div id="verify-section" class="hidden">
+            <h5>Verify email</h5>
+            <p>Enter the verification code returned during registration.</p>
+            <form id="verify-form">
+              <div class="form-group">
+                <label for="verify-code">Verification code</label>
+                <input type="text" id="verify-code" required placeholder="Verification code" />
+              </div>
+              <button type="submit">Verify Email</button>
+            </form>
+          </div>
+        </div>
       </section>
     </main>
 
